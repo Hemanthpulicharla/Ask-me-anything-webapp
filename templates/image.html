@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head>
+  <title>Answering AI</title>
+  <link
+    rel="shortcut icon"
+    href="{{ url_for('static', filename='mech.png') }}"
+  />
+  <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" />
+</head>
+
+<body>
+  <img src="{{ url_for('static', filename='dog.png') }}" class="icon" />
+  <h3>Ask me anything?!😎😴</h3>
+  <form action="/" method="post">
+    <input type="text" name="animal" placeholder="Enter a question" required />
+    <input type="submit" value="Generate names" />
+  </form>
+  {% if image %}
+  <div class="result" style="white-space: pre-wrap"><img src="{{image}}"></div>
+  {% endif %}
+  <br>
+  <hr width="100%" size="10" color="grey">
+   <div class="small text-center text-muted fst-italic">Copyright &copy; <a href="http://hemanthpulicharla.pythonanywhere.com" target="_blank">Hemanth✨😴</a></div>
+</body>
